@@ -1,0 +1,37 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp32-web-server-websocket-sliders/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RTOS. Course Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <h1>ESP32 WebSocket. FreeRTOS. Course Project by S.Frantsev</h1>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">LEDonThreshold</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider1" min="0" max="255" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">Threshold: <span id="sliderValue1"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <p class="state2">Luminosity: <span id="Lux"></span>&nbsp lux</p>
+    
+    <input type="number" id="quantity" name="quantity" min="1" max="255">
+
+    <input type="button" onclick="entermask(this)" value="Enter">
+
+    <p class="state3">BitMasks: <span id="Bitmask"></span>&nbsp dec</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
